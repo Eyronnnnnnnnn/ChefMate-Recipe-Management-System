@@ -12,6 +12,7 @@
             try{
             const response = await fetch(url)
             const Getresponse = await response.json()
+            setData(Getresponse);
             }catch(error){
                 console.log(error)
             }
@@ -19,6 +20,7 @@
         }
 
           Fetchdata()
-        },[])
+        },[url])
     
+         return {data,loading, error}
     }
