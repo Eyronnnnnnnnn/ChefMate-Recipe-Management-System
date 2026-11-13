@@ -5,7 +5,7 @@ function App() {
   
 
   return (
-  <div>ds</div>
+  <div className=''>ds</div>
   )
 }
 
