@@ -11,9 +11,17 @@
 
             try{
             const response = await fetch(url)
+
+            if(!response.ok){
+                throw new Error("Failed to fetch Data")
+            }
+
             const Getresponse = await response.json()
             setData(Getresponse);
+            setLoading(false)
             }catch(error){
+                setLoading(false)
+                setError(error)
                 console.log(error)
             }
            

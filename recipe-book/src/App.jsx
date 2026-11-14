@@ -5,10 +5,18 @@ import useFetch from './hooks/useFetch'
 function App() {
   const { data,loading ,error} = useFetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
 console.log(data)
+
+if(!data ){return}
+
   return (
   <div className=''>
-    <h1>recipe data : </h1>
-    <p></p>
+      <div>
+        {data.meals.map((data)=>(
+          <div key={data.idMeal}>
+            <p>{data.strMeal}</p>
+          </div>
+        ))}
+      </div>
   </div>
   )
 }
