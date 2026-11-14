@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import CategoryChips from './components/CategoryChips'
+import RecipeList from './components/RecipeList'
 import useFetch from './hooks/useFetch'
 
 function App() {
@@ -15,6 +16,7 @@ if(!data ){return}
       <div>
        <Header/>
        <CategoryChips/>
+       <RecipeList/>
       </div>
   </div>
   )
