@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
+import CategoryChips from './components/CategoryChips'
 import useFetch from './hooks/useFetch'
 
 function App() {
@@ -13,6 +14,7 @@ if(!data ){return}
   <div className=''>
       <div>
        <Header/>
+       <CategoryChips/>
       </div>
   </div>
   )
