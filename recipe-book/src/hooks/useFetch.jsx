@@ -21,7 +21,7 @@
             setLoading(false)
             }catch(error){
                 setLoading(false)
-                setError(error)
+                setError(error.message)
                 console.log(error)
             }
            

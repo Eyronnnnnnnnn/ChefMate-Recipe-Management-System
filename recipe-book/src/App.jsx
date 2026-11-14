@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
 import useFetch from './hooks/useFetch'
 
 function App() {
@@ -11,11 +12,7 @@ if(!data ){return}
   return (
   <div className=''>
       <div>
-        {data.meals.map((data)=>(
-          <div key={data.idMeal}>
-            <p>{data.strMeal}</p>
-          </div>
-        ))}
+       <Header/>
       </div>
   </div>
   )
