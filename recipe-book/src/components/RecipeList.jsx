@@ -16,6 +16,7 @@ export default function RecipeList({data,HandleFavoriteClick}){
                 {data.meals.map((meal)=>(
                       <RecipeCard key={meal.idMeal}
                     data = {meal.strMeal}
+                    idMeal = {meal.idMeal}
                     pic = {meal.strMealThumb}
                     categ = {meal.strCategory}
                     HandleFavoriteClick = {HandleFavoriteClick}
