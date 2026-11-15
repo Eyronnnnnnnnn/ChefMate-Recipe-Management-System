@@ -1,4 +1,4 @@
-export default function RecipeCard() {
+export default function RecipeCard({data}) {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-200">
       <div className="relative">
@@ -17,7 +17,7 @@ export default function RecipeCard() {
           Category
         </span>
         <h3 className="mt-2 text-lg font-bold text-gray-800 truncate">
-          Meal name
+         {data}
         </h3>
         <p className="mt-1 text-sm text-amber-500">★ 4.5</p>
       </div>
