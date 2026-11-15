@@ -18,7 +18,7 @@ if(!data ){return}
   if (favorite.includes(id)){
     setFavorite( favorite.filter((fav)=> fav !== id))
   }else{
-  setFavorite(favorite.map((fav)=> fav === id ))
+  setFavorite([...favorite , id])
   }
  }
 
