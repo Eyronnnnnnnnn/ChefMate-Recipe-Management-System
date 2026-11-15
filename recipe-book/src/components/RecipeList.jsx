@@ -8,7 +8,7 @@ export default function RecipeList({data}){
                    <h1 className="text-2xl font-bold">Popular Recipes</h1>
                 </div>
                 <div>
-                    <span className="text-sm text-gray-500">6 Recipes</span>
+                    <span className="text-sm text-gray-500">{data.meals.length} Recipes</span>
                 </div>
             </div>
 
