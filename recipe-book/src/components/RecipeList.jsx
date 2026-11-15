@@ -1,19 +1,22 @@
-export default function RecipeList(){
+import RecipeCard from "./RecipeCard"
+
+export default function RecipeList({data}){
     return(
-        <div className="bg-amber-300 w-full h-80 pl-12 pr-12">
-            <div className="flex justify-between">
+        <div className="w-full px-12 py-8">
+            <div className="flex justify-between items-center mb-6">
                 <div>
-                   <h1 className="text-2xl font-bold">Popular Recipes </h1>
+                   <h1 className="text-2xl font-bold">Popular Recipes</h1>
                 </div>
-                 <div>
-                    <span>6 Recipes</span>
-                 </div>
+                <div>
+                    <span className="text-sm text-gray-500">6 Recipes</span>
+                </div>
             </div>
 
-         <div>
-    
-         </div>
-
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <RecipeCard
+                    data = {data}
+                />
+            </div>
         </div>
     )
 }
