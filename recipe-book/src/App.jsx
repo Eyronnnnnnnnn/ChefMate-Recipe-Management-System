@@ -9,17 +9,16 @@ import useFetch from './hooks/useFetch'
 function App() {
   const { data,loading ,error} = useFetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
 console.log(data)
-const [heart,setHeart] = useState(0);
-const [isFavorite , setIsFavorite] = useState(false);
+
+const [favorite , setFavorite] = useState([]);
 
 if(!data ){return}
 
-const HeartToggle = ()=> {
-    if(isFavorite){
-      setHeart(heart => heart + 1)
-    }else
-      setHeart(heart => heart - 1)
-}
+ const HandleFavoriteClick = (id)=>{
+  if (favorite.includes(id)){
+
+  }
+ }
 
   return (
   <div className=''>
