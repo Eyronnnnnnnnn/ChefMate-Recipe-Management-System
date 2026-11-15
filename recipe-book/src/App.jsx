@@ -16,7 +16,9 @@ if(!data ){return}
 
  const HandleFavoriteClick = (id)=>{
   if (favorite.includes(id)){
-
+    setFavorite( favorite.filter((fav)=> fav !== id))
+  }else{
+  setFavorite(favorite.map((fav)=> fav === id ))
   }
  }
 
