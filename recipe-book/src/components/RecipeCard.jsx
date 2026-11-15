@@ -3,7 +3,7 @@ export default function RecipeCard({data,pic}) {
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-200">
       <div className="relative">
         <img
-          src= pic
+          src= {pic}
           alt="meal"
           className="w-full h-44 object-cover"
         />
