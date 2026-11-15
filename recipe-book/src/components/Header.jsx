@@ -32,7 +32,7 @@ function ChefHatIcon() {
   );
 }
 
-export default function Header() {
+export default function Header({favorite}) {
   return (
     <div className="w-full h-24 px-14 flex items-center border-b border-gray-500/30">
 
@@ -53,7 +53,7 @@ export default function Header() {
         </button>
 
         <button className="flex items-center gap-2 text-sm text-gray-700">
-          ♡
+        {favorite.length} ♡ 
           Favorites
         </button>
 

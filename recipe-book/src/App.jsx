@@ -11,7 +11,7 @@ function App() {
 console.log(data)
 
 const [favorite , setFavorite] = useState([]);
-
+console.log(favorite);
 if(!data ){return}
 
  const HandleFavoriteClick = (id)=>{
@@ -25,7 +25,9 @@ if(!data ){return}
   return (
   <div className=''>
       <div>
-       <Header/>
+       <Header
+       favorite = {favorite}
+       />
        <CategoryChips/>
        <RecipeList
        HandleFavoriteClick ={HandleFavoriteClick}
