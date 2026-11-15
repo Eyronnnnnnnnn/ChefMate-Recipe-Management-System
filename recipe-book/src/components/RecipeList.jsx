@@ -17,6 +17,7 @@ export default function RecipeList({data}){
                       <RecipeCard key={meal.idMeal}
                     data = {meal.strMeal}
                     pic = {meal.strMealThumb}
+                    categ = {meal.strCategory}
                 />
                 ))}
                
