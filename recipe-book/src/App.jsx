@@ -28,6 +28,7 @@ if(!data ){return}
        <Header/>
        <CategoryChips/>
        <RecipeList
+       HandleFavoriteClick ={HandleFavoriteClick}
        data = { data}
        />
       </div>
