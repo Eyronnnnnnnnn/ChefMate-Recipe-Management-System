@@ -8,6 +8,7 @@ import useFetch from './hooks/useFetch'
 
 function App() {
   const { data,loading ,error} = useFetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
+  const [search , setSearch] = useState("")
 console.log(data)
 
 const [favorite , setFavorite] = useState([]);
@@ -22,14 +23,23 @@ if(!data ){return}
   }
  }
 
+
+ const filteredSearch = data.filter((recipe)=>(
+  recipe.strMeal.toLowerCase().includes(search.toLocaleLowerCase());
+ ))
+
   return (
   <div className=''>
       <div>
        <Header
        favorite = {favorite}
        />
-       <CategoryChips/>
+       <CategoryChips
+       setSearch = {setSearch}
+       search = {search}
+       />
        <RecipeList
+       search = {search}
        favorite = {favorite}
        HandleFavoriteClick ={HandleFavoriteClick}
        data = { data}
