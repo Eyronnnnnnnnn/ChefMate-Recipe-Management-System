@@ -1,4 +1,4 @@
-export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal}) {
+export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal,favorite}) {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-200">
       <div className="relative">
@@ -7,11 +7,20 @@ export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal}) 
           alt="meal"
           className="w-full h-44 object-cover"
         />
-        <button
+        {favorite ? (
+  <button
         onClick={()=>HandleFavoriteClick(idMeal)}
         className="absolute top-3 right-3 bg-white/90 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow text-lg">
           ♡
         </button>
+        ) : (
+            <button
+        onClick={()=>HandleFavoriteClick(idMeal)}
+        className="absolute top-3 right-3 bg-white/90 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow text-lg">
+            ♥
+        </button>
+        )}
+      
       </div>
 
       <div className="p-4">

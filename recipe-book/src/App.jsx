@@ -30,6 +30,7 @@ if(!data ){return}
        />
        <CategoryChips/>
        <RecipeList
+       favorite = {favorite}
        HandleFavoriteClick ={HandleFavoriteClick}
        data = { data}
        />
