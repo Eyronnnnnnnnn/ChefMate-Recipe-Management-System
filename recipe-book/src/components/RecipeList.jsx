@@ -1,6 +1,6 @@
 import RecipeCard from "./RecipeCard"
 
-export default function RecipeList({data,HandleFavoriteClick,favorite,search}){
+export default function RecipeList({data,HandleFavoriteClick,favorite,filteredSearch}){
     return(
         <div className="w-full px-12 py-8">
             <div className="flex justify-between items-center mb-6">
@@ -13,7 +13,7 @@ export default function RecipeList({data,HandleFavoriteClick,favorite,search}){
             </div>
              
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {data.meals.map((meal)=>(
+                {filteredSearch.map((meal)=>(
                       <RecipeCard key={meal.idMeal}
                     data = {meal.strMeal}
                     idMeal = {meal.idMeal}

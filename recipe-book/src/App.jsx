@@ -24,9 +24,9 @@ if(!data ){return}
  }
 
 
- const filteredSearch = data.filter((recipe)=>(
-  recipe.strMeal.toLowerCase().includes(search.toLocaleLowerCase());
- ))
+const filteredSearch = (data?.meals || []).filter((recipe)=>(
+  recipe.strMeal.toLowerCase().includes(search.toLocaleLowerCase())
+))
 
   return (
   <div className=''>
@@ -43,6 +43,7 @@ if(!data ){return}
        favorite = {favorite}
        HandleFavoriteClick ={HandleFavoriteClick}
        data = { data}
+       filteredSearch={filteredSearch}
        />
       </div>
   </div>
