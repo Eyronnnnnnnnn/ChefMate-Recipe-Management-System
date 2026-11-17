@@ -7,7 +7,7 @@ export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal,fa
           alt="meal"
           className="w-full h-44 object-cover"
         />
-        {favorite.includes(idMeal)? (
+        {favorite.includes(idMeal) ? (
          <button
         onClick={()=>HandleFavoriteClick(idMeal)}
         className="absolute top-3 right-3 bg-white/90 hover:bg-white rounded-full w-9 h-9 flex items-center justify-center shadow text-lg">
