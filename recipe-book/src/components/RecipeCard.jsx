@@ -1,4 +1,5 @@
-export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal,favorite}) {
+import { memo } from "react";
+export default  memo(function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal,favorite}) {
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-200">
       <div className="relative">
@@ -34,4 +35,4 @@ export default function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal,fa
       </div>
     </div>
   );
-}
+})
