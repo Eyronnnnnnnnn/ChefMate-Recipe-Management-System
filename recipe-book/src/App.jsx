@@ -32,7 +32,7 @@ if(!data ){return}
   }else{
   setFavorite([...favorite , id])
   }
- }
+ }d
 
 
 
