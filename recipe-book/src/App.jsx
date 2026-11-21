@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import CategoryChips from './components/CategoryChips'
@@ -24,15 +24,18 @@ return (data?.meals || []).filter((recipe)=>(
 },[data,debounceSearch])
 
 
-if(!data ){return}
-
- const HandleFavoriteClick = (id)=>{
-  if (favorite.includes(id)){
+ const HandleFavoriteClick = useCallback((id)=>{
+ if (favorite.includes(id)){
     setFavorite( favorite.filter((fav)=> fav !== id))
   }else{
   setFavorite([...favorite , id])
   }
- }
+ },[favorite])
+
+
+
+if(!data ){return}
+
 
 
 
