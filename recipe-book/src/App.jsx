@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import CategoryChips from './components/CategoryChips'
 import RecipeList from './components/RecipeList'
 import useFetch from './hooks/useFetch'
+import useDebounce from './hooks/useDebounce'
 
 
 function App() {
@@ -13,6 +14,16 @@ console.log(data)
 
 const [favorite , setFavorite] = useState([]);
 console.log(favorite);
+ const debounceSearch = useDebounce(search,500)
+
+ 
+const filteredSearch = useMemo(()=>{
+return (data?.meals || []).filter((recipe)=>(
+  recipe.strMeal.toLowerCase().includes(debounceSearch.toLocaleLowerCase())
+))
+},[data,debounceSearch])
+
+
 if(!data ){return}
 
  const HandleFavoriteClick = (id)=>{
@@ -24,9 +35,9 @@ if(!data ){return}
  }
 
 
-const filteredSearch = (data?.meals || []).filter((recipe)=>(
-  recipe.strMeal.toLowerCase().includes(search.toLocaleLowerCase())
-))
+
+
+
 
   return (
   <div className=''>
@@ -47,7 +58,7 @@ const filteredSearch = (data?.meals || []).filter((recipe)=>(
        />
       </div>
   </div>
-  )
+  ) 
 }
 
 export default App
