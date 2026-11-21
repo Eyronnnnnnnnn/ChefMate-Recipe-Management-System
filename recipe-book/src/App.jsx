@@ -13,7 +13,7 @@ function App() {
   const [search , setSearch] = useState("")
 console.log(data)
 
-const [favorite , setFavorite] = useLocalStorage([]);
+
 console.log(favorite);
  const debounceSearch = useDebounce(search,500)
 
