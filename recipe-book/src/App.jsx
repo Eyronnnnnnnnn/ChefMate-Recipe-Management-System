@@ -5,6 +5,7 @@ import CategoryChips from './components/CategoryChips'
 import RecipeList from './components/RecipeList'
 import useFetch from './hooks/useFetch'
 import useDebounce from './hooks/useDebounce'
+import useLocalStorage from './hooks/useLocalStorage'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   const [search , setSearch] = useState("")
 console.log(data)
 
-const [favorite , setFavorite] = useState([]);
+const [favorite , setFavorite] = useLocalStorage([]);
 console.log(favorite);
  const debounceSearch = useDebounce(search,500)
 
