@@ -2,7 +2,7 @@ import { memo } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 import { useContext } from "react";
 export default  memo(function RecipeCard({data,pic,categ,HandleFavoriteClick,idMeal}) {
-  const {favorite} = useContext(fa)
+  const {favorite,HandleFavoriteClick} = useContext(FavoriteContext)
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-200">
       <div className="relative">
