@@ -6,7 +6,7 @@ import RecipeList from './components/RecipeList'
 import useFetch from './hooks/useFetch'
 import useDebounce from './hooks/useDebounce'
 import useLocalStorage from './hooks/useLocalStorage'
-import FavoriteContext from './context/FavoriteContext'
+import   from './context/FavoriteContext'
 
 
 function App() {
