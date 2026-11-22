@@ -46,11 +46,11 @@ function App() {
         <Header favorite={favorite} />
         <CategoryChips setSearch={setSearch} search={search} />
 
-        <FavoriteContext.Provider value={favorite}>
+        <FavoriteContext.Provider value={{ favorite , HandleFavoriteClick }}>
           <RecipeList
             search={search}
            
-            HandleFavoriteClick={HandleFavoriteClick}
+
             data={data}
             filteredSearch={filteredSearch}
           />
