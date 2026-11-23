@@ -1,6 +1,6 @@
 import RecipeCard from "./RecipeCard"
 
-export default function RecipeList({data,HandleFavoriteClick,favorite,filteredSearch}){
+export default function RecipeList({data,filteredSearch}){
     return(
         <div className="w-full px-12 py-8">
             <div className="flex justify-between items-center mb-6">
@@ -19,8 +19,7 @@ export default function RecipeList({data,HandleFavoriteClick,favorite,filteredSe
                     idMeal = {meal.idMeal}
                     pic = {meal.strMealThumb}
                     categ = {meal.strCategory}
-                    favorite={favorite}
-                    HandleFavoriteClick = {HandleFavoriteClick}
+                
                 />
                 ))}
                

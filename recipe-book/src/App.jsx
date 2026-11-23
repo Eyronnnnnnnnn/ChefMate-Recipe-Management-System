@@ -49,8 +49,7 @@ function App() {
         <FavoriteContext.Provider value={{ favorite , HandleFavoriteClick }}>
           <RecipeList
             search={search}
-           
-
+          
             data={data}
             filteredSearch={filteredSearch}
           />

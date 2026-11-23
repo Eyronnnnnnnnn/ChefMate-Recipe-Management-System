@@ -15,7 +15,7 @@ const [debounceValue,setdebounceValue] = useState(value);
         clearInterval(timer)
      }
 
-  },[value])
+  },[value,delay])
 
   return debounceValue
 
