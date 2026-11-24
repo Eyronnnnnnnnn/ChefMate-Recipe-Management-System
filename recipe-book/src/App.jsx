@@ -33,8 +33,7 @@ function App() {
         setFavorite([...favorite, id]);
       }
     },
-    [favorite],
-  );
+    [favorite],);
 
   if (!data) {
     return;
