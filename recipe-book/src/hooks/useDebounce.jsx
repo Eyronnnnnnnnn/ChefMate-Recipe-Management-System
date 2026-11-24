@@ -12,7 +12,7 @@ const [debounceValue,setdebounceValue] = useState(value);
 
 
      return ()=>{
-        clearInterval(timer)
+        clearTimeout(timer)
      }
 
   },[value,delay])

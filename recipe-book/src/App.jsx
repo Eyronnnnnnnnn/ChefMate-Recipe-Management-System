@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="">
       <div>
-        <Header favorite={{ favorite }} />
+        <Header favorite={favorite} />
         <CategoryChips setSearch={setSearch} search={search} />
 
         <FavoriteContext.Provider value={{ favorite , HandleFavoriteClick }}>
