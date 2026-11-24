@@ -1,7 +1,13 @@
 import RecipeCard from "./RecipeCard"
 
-export default function RecipeList({data,filteredSearch}){
+export default function RecipeList({data,filteredSearch,loading}){
+    if(loading){
+        return(
+            <div>Loading</div>
+        )
+    }
     return(
+        
         <div className="w-full px-12 py-8">
             <div className="flex justify-between items-center mb-6">
                 <div>
