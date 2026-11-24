@@ -20,7 +20,7 @@ function App() {
   console.log(favorite);
   const debounceSearch = useDebounce(search, 500);
    const isSearching = search !==  debounceSearch;
-   const loading = loading || isSearching
+   const isloading = loading || isSearching
 
   const filteredSearch = useMemo(() => {
     return (data?.meals || []).filter((recipe) =>
@@ -51,8 +51,8 @@ function App() {
         <FavoriteContext.Provider value={{ favorite , HandleFavoriteClick }}>
           <RecipeList
             search={search}
-            loading={loading}
-          
+            isSearching={isSearching}
+           isloading = {isloading}
             data={data}
             filteredSearch={filteredSearch}
           />

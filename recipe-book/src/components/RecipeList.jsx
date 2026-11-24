@@ -1,9 +1,9 @@
 import RecipeCard from "./RecipeCard"
 
-export default function RecipeList({data,filteredSearch,loading}){
-    if(loading){
+export default function RecipeList({data,filteredSearch,isSearching,isloading}){
+    if(isSearching && isloading){
         return(
-            <div>Loading</div>
+            <div className="">Loading</div>
         )
     }
     return(
