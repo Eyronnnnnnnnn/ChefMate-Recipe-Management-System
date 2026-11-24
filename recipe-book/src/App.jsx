@@ -13,11 +13,14 @@ function App() {
     "https://www.themealdb.com/api/json/v1/1/search.php?s=chicken",
   );
   const [search, setSearch] = useState("");
+ 
   console.log(data);
 
   const [favorite, setFavorite] = useLocalStorage("favorite", []);
   console.log(favorite);
   const debounceSearch = useDebounce(search, 500);
+   const isSearching = search !==  debounceSearch;
+   const loading = loading || isSearching
 
   const filteredSearch = useMemo(() => {
     return (data?.meals || []).filter((recipe) =>
